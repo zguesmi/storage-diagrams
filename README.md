@@ -11,3 +11,18 @@ REPORT_GAS=true npx hardhat test
 npx hardhat node
 npx hardhat run scripts/deploy.ts
 ```
+
+### Generate class diagram
+
+```
+npx sol2uml class -o uml/Store-class.svg contracts/
+```
+
+### Generate storage diagram
+
+```
+$ npx sol2uml storage -c Store contracts/
+
+Error: Failed to find inherited contract "Ownable" of ".../contracts/Store.sol"
+[...]
+```
